@@ -15,7 +15,8 @@ then
 	    --runtime nvidia \
 	    --network host \
 	    --privileged \
-	    --device /dev/video* \
+	    --device /dev/video0 \
+		--device /dev/video1 \
 	    --volume /dev/bus/usb:/dev/bus/usb \
 	    --volume /tmp/argus_socket:/tmp/argus_socket \
 	    -p 8888:8888 \
@@ -33,7 +34,8 @@ else
 	    --runtime nvidia \
 	    --network host \
 	    --privileged \
-	    --device /dev/video* \
+	    --device /dev/video0 \
+		--device /dev/video1 \
 	    --volume /dev/bus/usb:/dev/bus/usb \
 	    --volume /tmp/argus_socket:/tmp/argus_socket \
 	    -p 8888:8888 \
